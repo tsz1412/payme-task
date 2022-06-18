@@ -14,7 +14,7 @@ use App\Http\Controllers\SaleController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('sales');
 });
 
 Route::resource('sales', SaleController::class);

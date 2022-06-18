@@ -14,7 +14,14 @@ class SaleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'price' => $this->faker->randomFloat(),
+            'currency' => 'ILS',
+            'sale_number' => $this->faker->randomNumber('9'),
+            'payment_link' => 'https://foo.co.il',
+            'created_at' => $this->faker->date(),
+            'updated_at' => $this->faker->date(),
+
         ];
     }
 }
